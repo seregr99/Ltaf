@@ -1,7 +1,7 @@
 /* 
 
 Codigo abierto - Dejar creditos
-Created by https://github.com/BrunoSobrino 
+Created by https://github.com/seregr99 
 
 👇🏻 EMPEIZA A MODIFICAR DESDE AQUÍ 👇🏻 */
 

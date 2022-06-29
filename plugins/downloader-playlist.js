@@ -1,4 +1,4 @@
-/* Created by https://github.com/BrunoSobrino */
+/* Created by https://github.com/seregr99 */
        /* Diseño by Yameko-Bot V1*/
 
 import yts from "yt-search"
