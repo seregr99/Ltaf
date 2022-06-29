@@ -19,9 +19,8 @@ let text = `
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/seregr99/Ltaf
-> cd Ltaf
-> npm install
+> git clone https://github.com/BrunoSobrino/TheMystic-Bot-MD
+> cd TheMystic-Bot-MD
 > yarn install 
 > npm install
 > npm update
@@ -32,7 +31,7 @@ contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: nul
 title: '𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝙲𝙸𝙾𝙽 - 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁𝙱𝙾𝚃',
 body: 'ᴛʜᴇ ᴍʏsᴛᴄ ﹣ ʙᴏᴛ',         
 previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
-sourceUrl: `https://github.com/seregr99/Ltaf`}}})   
+sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})   
 }
 handler.command = /^(instalarbot)/i
 export default handler
