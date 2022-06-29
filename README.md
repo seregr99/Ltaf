@@ -1,7 +1,7 @@
 # `🧿 𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝 🔮`
 
 ### `—◉ 👑 DUDAS SOBRE EL BOT?, CONTACTAME 👑`
-<a href="http://wa.me/5219992095479" target="blank"><img src="https://img.shields.io/badge/BRUNO_SOBRINO-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+<a href="http://wa.me/79054731060" target="blank"><img src="https://img.shields.io/badge/BRUNO_SOBRINO-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 > NO BOT
 
 ### `—◉ 💰 DONAR 💰`
@@ -64,7 +64,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```
 
 ### `—◉ 🔥 ACTIVAR EN BOXMINEHOST 🔥`
-<img src="https://raw.githubusercontent.com/BrunoSobrino/Ltaf/master/src/Pre%20Bot%20Publi.png" alt="GIF" width="450" height="240"/>
+<img src="https://raw.githubusercontent.com/Ltaf/Ltaf/master/src/Pre%20Bot%20Publi.png" alt="GIF" width="450" height="240"/>
 <p>> Pagina Oficial:
 <a href="https://boxmineworld.com">https://boxmineworld.com</a>
 <p>> Dashboard:
@@ -93,7 +93,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```
 
 ## `EDITOR Y PORPIETARIO DEL BOT` 
-[![BrunoSobrino](https://avatars.githubusercontent.com/u/90165013?s=400&u=946f5c00c527c7e6fa2ef5148c6ad56270bb600e&v=4size=100)](https://github.com/seregr99/) 
+[![Ltaf](https://avatars.githubusercontent.com/u/90165013?s=400&u=946f5c00c527c7e6fa2ef5148c6ad56270bb600e&v=4size=100)](https://github.com/seregr99/) 
 
 `The Mystic - Bot __________ By Bruno Sobrino`
 

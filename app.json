@@ -2,7 +2,7 @@
   "name": "Ltaf",
   "description": "Subscribete a The Shadow Borkers - Bot (≧▽≦)",
   "repository": "https://github.com/seregr99/Ltaf",
-  "logo": "https://raw.githubusercontent.com/BrunoSobrino/Ltaf/master/Menu2.jpg",
+  "logo": "https://raw.githubusercontent.com/Ltaf/Ltaf/master/Menu2.jpg",
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "buildpacks": [
   {
