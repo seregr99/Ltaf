@@ -1,8 +1,8 @@
 {
-  "name": "Ltaf",
+  "name": "TheMystic-Bot-MD",
   "description": "Subscribete a The Shadow Borkers - Bot (≧▽≦)",
-  "repository": "https://github.com/seregr99/Ltaf",
-  "logo": "https://raw.githubusercontent.com/Ltaf/Ltaf/master/Menu2.jpg",
+  "repository": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+  "logo": "https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/Menu2.jpg",
   "keywords": ["java", "bot", "whatsapp-bot", "whatsapp-automation"],
   "buildpacks": [
   {

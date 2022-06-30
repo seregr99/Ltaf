@@ -1,7 +1,7 @@
 /* 
 
 Codigo abierto - Dejar creditos
-Created by https://github.com/seregr99 
+Created by https://github.com/BrunoSobrino 
 
 👇🏻 EMPEIZA A MODIFICAR DESDE AQUÍ 👇🏻 */
 
@@ -341,7 +341,7 @@ message: wm,
 orderTitle: 'WaBot',
 thumbnail: imagen2, 
 sellerJid: '0@s.whatsapp.net' }}}}      
-const owner = "79054731060@s.whatsapp.net"
+const owner = "5219992095479@s.whatsapp.net"
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]
 const buttons = [

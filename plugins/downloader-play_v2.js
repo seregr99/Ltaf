@@ -9,7 +9,7 @@ contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: nul
 title: '𝚁𝙴𝙿𝚁𝙾𝙳𝚄𝙲𝚃𝙾𝚁 𝙳𝙴 𝙰𝚄𝙳𝙸𝙾',
 body: 'ʙʏ ᴛʜᴇ ᴍʏsᴛɪᴄ ﹣ ʙᴏᴛ',         
 previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
-sourceUrl: `https://github.com/seregr99/Ltaf`}}})  
+sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})  
 let res = await fetch("https://violetics.pw/api/media/youtube-play?apikey=beta&query="+text)
 let json = await res.json()
 conn.sendFile(m.chat, json.result.dlmp3, 'error.mp3', null, m, false, { mimetype: 'audio/mp4' })}
@@ -19,7 +19,7 @@ contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: nul
 title: '𝚁𝙴𝙿𝚁𝙾𝙳𝚄𝙲𝚃𝙾𝚁 𝙳𝙴 𝚅𝙸𝙳𝙴𝙾',
 body: 'ʙʏ ᴛʜᴇ ᴍʏsᴛɪᴄ ﹣ ʙᴏᴛ',         
 previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
-sourceUrl: `https://github.com/seregr99/Ltaf`}}})
+sourceUrl: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`}}})
 let res = await fetch("https://violetics.pw/api/media/youtube-play?apikey=beta&query="+text)
 let json = await res.json()
 conn.sendFile(m.chat, json.result.dlmp4, 'error.mp4', `_𝐓𝐡𝐞 𝐌𝐲𝐬𝐭𝐢𝐜 - 𝐁𝐨𝐭_`, m)}
