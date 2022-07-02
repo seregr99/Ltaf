@@ -1,5 +1,5 @@
 {
-    "name": "Ltaf",
+    "name": "TheMystic-Bot-MD",
     "version": "1.0.0",
     "description": "Subscribete al canal de YT The Shadow Borkers",
     "main": "index.js",
@@ -12,23 +12,18 @@
     "scripts": {
         "start": "node index.js",
         "cli": "node . --optimize_for_size --max_old_space_size=460 index.js",
-        "db": "node . --autocleartmp --db 'mongodb+srv://seregr99
-:Akhmad6825@cluster0.mflne.mongodb.net/Ltaf?retryWrites=true&w=majority'"
+        "db": "node . --autocleartmp --db 'mongodb+srv://BrunoSobrino:Akhmad6825@cluster0.mflne.mongodb.net/TheMystic-Bot-MD?retryWrites=true&w=majority'"
     },
-    "homepage": "https://github.com/seregr99
-",
+    "homepage": "https://github.com/BrunoSobrino",
     "author": {
-        "name": "seregr99
-"
+        "name": "BrunoSobrino"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/seregr99
-/Ltaf.git"
+        "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/seregr99
-/Ltaf/issues"
+        "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
     },
     "license": "MIT",
     "dependencies": {

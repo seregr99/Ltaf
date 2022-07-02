@@ -193,6 +193,8 @@ let str = `
 *<𝔼𝔽𝔼ℂ𝕋𝕆𝕊 𝕐 𝕃𝕆𝔾𝕆𝕊/>*
 
 ° ඬ⃟🖍️ _${usedPrefix}logos *<efecto> <texto>*_
+° ඬ⃟🖍️ _${usedPrefix}logocorazon *<texto>*_
+° ඬ⃟🖍️ _${usedPrefix}logochristmas *<texto>*_
 ° ඬ⃟🖍️ _${usedPrefix}simpcard *<@tag>*_
 ° ඬ⃟🖍️ _${usedPrefix}hornycard *<@tag>*_
 ° ඬ⃟🖍️ _${usedPrefix}lolice *<@tag>*_
@@ -404,11 +406,17 @@ _(𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)_
 ° ඬ⃟👽 _${usedPrefix}s *<responder a imagen o video>*_
 ° ඬ⃟👽 _${usedPrefix}s *<enlace / link / url>*_
 ° ඬ⃟👽 _${usedPrefix}emojimix *<emoji 1>&<emoji 2>*_
+° ඬ⃟👽 _${usedPrefix}scircle *<responder a imagen>*_
 ° ඬ⃟👽 _${usedPrefix}semoji *<tipo> <emoji>*_
 ° ඬ⃟👽 _${usedPrefix}attp *<texto>*_
+° ඬ⃟👽 _${usedPrefix}attp2 *<texto>*_
 ° ඬ⃟👽 _${usedPrefix}ttp *<texto>*_
+° ඬ⃟👽 _${usedPrefix}ttp2 *<texto>*_
+° ඬ⃟👽 _${usedPrefix}ttp3 *<texto>*_
+° ඬ⃟👽 _${usedPrefix}ttp4 *<texto>*_
+° ඬ⃟👽 _${usedPrefix}ttp5 *<texto>*_
 ° ඬ⃟👽 _${usedPrefix}pat *<@tag>*_
-° ඬ⃟👽 _${usedPrefix}slap *<@tag>_
+° ඬ⃟👽 _${usedPrefix}slap *<@tag>*_
 ° ඬ⃟👽 _${usedPrefix}kiss *<@tag>*_
 ° ඬ⃟👽 _${usedPrefix}dado_
 ° ඬ⃟👽 _${usedPrefix}wm *<packname> <author>*_
@@ -443,8 +451,7 @@ _(𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)_
 ° ඬ⃟👑 _${usedPrefix}delprem *<@tag>*_
 ° ඬ⃟👑 _${usedPrefix}listprem_
 `.trim()
-conn.sendHydrated2(m.chat, str, wm, pp, 'https://www.paypal.me/TheShadowBrokers133', '𝙿𝙰𝚈𝙿𝙰𝙻', 'https://github.com/seregr99
-/Ltaf', '𝙶𝙸𝚃𝙷𝚄𝙱', [
+conn.sendHydrated2(m.chat, str, wm, pp, 'https://www.paypal.me/TheShadowBrokers133', '𝙿𝙰𝚈𝙿𝙰𝙻', 'https://github.com/BrunoSobrino/TheMystic-Bot-MD', '𝙶𝙸𝚃𝙷𝚄𝙱', [
 ['📮 𝙳𝙾𝙽𝙰𝚁 📮', '/donasi'],
 ['🌹 𝙾𝚆𝙽𝙴𝚁 🌹', '/owner'],
 ['🐾 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🐾', '/infobot']
