@@ -1,100 +1,187 @@
-import { watchFile, unwatchFile } from 'fs'
+import fs, {
+	watchFile,
+	unwatchFile
+} from 'fs'
 import chalk from 'chalk'
-import { fileURLToPath } from 'url'
-import fs from 'fs'
-
-
+import {
+	fileURLToPath
+} from 'url'
+import moment from 'moment-timezone'
+var a = (await import("./lib/tictactoe.cjs")).default
+/*============= WAKTU =============*/
+let wibh = moment.tz('Asia/Jakarta').format('HH')
+let wibm = moment.tz('Asia/Jakarta').format('mm')
+let wibs = moment.tz('Asia/Jakarta').format('ss')
+let wktuwib = `${wibh} Jᴀᴍ ${wibm} Mᴇɴɪᴛ ${wibs} Dᴇᴛɪᴋ`
+let d = new Date(new Date + 3600000)
+let locale = 'id'
+// d.getTimeZoneOffset()
+// Offset -420 is 18.00
+// Offset    0 is  0.00
+// Offset  420 is  7.00
+let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
+let week = d.toLocaleDateString(locale, {
+	weekday: 'long'
+})
+let date = d.toLocaleDateString(locale, {
+	day: 'numeric',
+	month: 'long',
+	year: 'numeric'
+})
+global.TicTacToe = a
+global.moment = moment
+global.botdate = `⫹⫺ 𝗗𝗮𝘁𝗲: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
+global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${wktuwib}`
+global.work = `*Sᴜᴄᴄᴇꜱꜱ Fᴇᴛᴄʜɪɴɢ Dᴀᴛᴀ*\n*Sᴇɴᴅɪɴɢ Fɪʟᴇ...*`
+global.error = `*Cᴀɴ\'ᴛ Fᴇᴛᴄʜɪɴɢ Dᴀᴛᴀ*`
+global.profil = fs.readFileSync("./src/botstyle.png")
+global.zippy = (await import('./lib/zippy.cjs')).zippy
+global.tiny = (await import('./lib/tiny.cjs')).default
+global.gc = "https://chat.whatsapp.com/KihEAYjKr04LI4uUrbiiip"
+global.gh = "https://github.com/botstylee"
+global.yt = "https://youtube.com/channel/UCrNO1yUYW0i3xsJp4NGBh4Q"
+function ucapan() {
+	const time = moment.tz('Asia/Jakarta').format('HH')
+	var res
+	res = tiny("Selamat pagi ")
+	if (time >= 4) {
+		res = tiny("Selamat pagi ")
+	}
+	if (time > 10) {
+		res = tiny("Selamat siang ")
+	}
+	if (time >= 15) {
+		res = tiny("Selamat sore ")
+	}
+	if (time >= 18) {
+		res = tiny("Selamat malam ")
+	}
+	return res
+}
+global.say = ucapan()
+global.getbuffer = async function getBuffer(url, options) {
+	try {
+		options ? options : {}
+		var res = await axios({
+			method: "get",
+			url,
+			headers: {
+				'DNT': 1,
+				'User-Agent': 'GoogleBot',
+				'Upgrade-Insecure-Request': 1
+			},
+			...options,
+			responseType: 'arraybuffer'
+		})
+		return res.data
+	} catch (e) {
+		console.log(`Error : ${e}`)
+	}
+}
+global.log = async function log(data, data2, data3) {
+	if (!(data2 || data3)) {
+		return console.log(data)
+	} else if (!data3) {
+		return console.log(data, data2)
+	} else {
+		return console.log(data, data2, data3)
+	}
+}
 global.owner = [
-  ['79054731060', '👑 Бот Царя 👑', true],
-  ['79054731060', '🤖 Бот Царя 🤖', true],
-  ['79054731060']
-] // Cambia los numeros que quieras
-global.mods = [] 
-global.prems = [] 
+	//  ['6281234288573'],
+	//['12546153210'],
+	//['62895368900456'],
+	['62895368900456', 'Benniismael', true]
+	// [number, dia creator/owner?, dia developer?]
+] // Put your number here
+global.mods = [] // Want some help?
+global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
-  // name: 'https://website'
-  amel: 'https://melcanz.com',
-  bx: 'https://bx-hunter.herokuapp.com',
-  nrtm: 'https://nurutomo.herokuapp.com',
-  xteam: 'https://api.xteam.xyz',
-  nzcha: 'http://nzcha-apii.herokuapp.com',
-  bg: 'http://bochil.ddns.net',
-  fdci: 'https://api.fdci.se',
-  dzx: 'https://api.dhamzxploit.my.id',
-  bsbt: 'https://bsbt-api-rest.herokuapp.com',
-  zahir: 'https://zahirr-web.herokuapp.com',
-  zeks: 'https://api.zeks.me',
-  hardianto: 'https://hardianto-chan.herokuapp.com',
-  pencarikode: 'https://pencarikode.xyz', 
-  LeysCoder: 'https://leyscoders-api.herokuapp.com',
-  adiisus: 'https://adiixyzapi.herokuapp.com',
-  lol: 'https://api.lolhuman.xyz',
-  pencarikode: 'https://pencarikode.xyz',
-  Velgrynd: 'https://velgrynd.herokuapp.com',
-  rey: 'https://server-api-rey.herokuapp.com',
-  hardianto: 'http://hardianto-chan.herokuapp.com',
-  shadow: 'https://api.reysekha.xyz',
-  apialc: 'https://api-alc.herokuapp.com',
-  botstyle: 'https://botstyle-api.herokuapp.com',
-  neoxr: 'https://neoxr-api.herokuapp.com',
-  ana: 'https://anabotofc.herokuapp.com/',
-  kanx: 'https://kannxapi.herokuapp.com/',
-  dhnjing: 'https://dhnjing.xyz',
-  violetics: 'https://violetics.pw'
-},
+	// name: 'https://website'
+	nrtm: 'https://nurutomo.herokuapp.com/',
+	ghst: 'https://ghostui-api.herokuapp.com/',
+	beni: 'https://rest-beni.herokuapp.com/'
+}
 global.APIKeys = { // APIKey Here
-  // 'https://website': 'apikey'
-  'https://api-alc.herokuapp.com': 'ConfuMods',
-  'https://api.reysekha.xyz': 'apirey',
-  'https://melcanz.com': 'F3bOrWzY',
-  'https://bx-hunter.herokuapp.com': 'Ikyy69',
-  'https://api.xteam.xyz': '5bd33b276d41d6b4',
-  'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://bsbt-api-rest.herokuapp.com': 'benniismael',
-  'https://api.zeks.me': 'apivinz',
-  'https://hardianto-chan.herokuapp.com': 'hardianto',
-  'https://pencarikode.xyz': 'pais', 
-  'https://leyscoders-api.herokuapp.com': 'MIMINGANZ', 
-  'https://server-api-rey.herokuapp.com': 'apirey',
-  'https://api.lolhuman.xyz': '9b817532fadff8fc7cb86862',
-  'https://botstyle-api.herokuapp.com': 'Eyar749L',
-  'https://neoxr-api.herokuapp.com': 'yntkts',
-  'https://anabotofc.herokuapp.com/': 'AnaBot',
-  'https://violetics.pw': 'beta'
+	// 'https://website': 'apikey'
+	'https://ghostui-api.herokuapp.com/': 'salahlo'
 }
-
 // Sticker WM
-global.packname = '(☞ﾟ∀ﾟ)☞'
-global.author = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
-
-global.wm = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
-global.igfg = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
-global.wait = '*⌛ _Cargando..._ ▬▬▬▭*'
-
-global.imagen1 = fs.readFileSync('./Menu2.jpg')
-global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
-global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
-
-global.multiplier = 9999 
-
+global.packname = 'ig : Beni_230\'Benniismael'
+global.author = 'BENNIISMAEL & GHOST'
+global.nomorown = '62895368900456'
+global.multiplier = 69 // The higher, The harder levelup
+global.titlebot = `⫹⫺ RPG BOT Whatsapp | By ${author}`
 global.rpg = {
-  emoticon(string) {
-    string = string.toLowerCase()
-    let emot = {
-      level: '🏆',
-      limit: '💎',
-      exp: '🕹️'
-    }
-    let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
-    if (!results.length) return ''
-    else return emot[results[0][0]]
-  }
+	emoticon(string) {
+		string = string.toLowerCase()
+		let emot = {
+			level: '🧬',
+			limit: '🌌',
+			health: '❤️',
+			exp: '✉️',
+			money: '💵',
+			potion: '🥤',
+			diamond: '💎',
+			common: '📦',
+			uncommon: '🎁',
+			mythic: '🗳️',
+			legendary: '🗃️',
+			pet: '🎁',
+			trash: '🗑',
+			armor: '🥼',
+			sword: '⚔️',
+			fishingrod: '🎣',
+			pickaxe: '⛏️',
+			bow: '🏹',
+			axe: '🪓',
+			wood: '🪵',
+			rock: '🪨',
+			string: '🕸️',
+			horse: '🐎',
+			cat: '🐈',
+			dog: '🐕',
+			fox: '🦊',
+			petFood: '🍖',
+			iron: '⛓️',
+			gold: '👑',
+			emerald: '💚',
+/*=====| Hasil berburu |========*/
+			kepiting: '🦀',
+			lobster: '🦞',
+			udang: '🦐',
+			cumi: '🦑', 
+			gurita: '🐙', 
+			buntal: '🐡', 
+			dory: '🐠', 
+			orca: '🐟', 
+			lumba: '🐬', 
+			paus: '🐳', 
+			hiu: '🦈', 
+			banteng: '🐂', 
+			harimau: '🐅', 
+			gajah: '🐘', 
+			kambing: '🐐', 
+			panda: '🐼', 
+			buaya: '🐊', 
+			kerbau: '🐃', 
+			sapi: '🐮', 
+			monyet: '🐒', 
+			babihutan: '🐗', 
+			babi: '🐖', 
+			ayam: '🐓'
+		}
+		let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
+		if (!results.length) return ''
+		else return emot[results[0][0]]
+	}
 }
 
 
-let file = fileURLToPath(import.meta.url)
+let file = fileURLToPath(
+	import.meta.url)
 watchFile(file, () => {
-  unwatchFile(file)
-  console.log(chalk.redBright("Update 'config.js'"))
-  import(`${file}?update=${Date.now()}`)
+	unwatchFile(file)
+	console.log(chalk.redBright("Update 'config.js'"))
+	import(`${file}?update=${Date.now()}`)
 })
