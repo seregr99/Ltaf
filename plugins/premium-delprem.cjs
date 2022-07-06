@@ -15,9 +15,9 @@ let handler = async (m, {
 	m.reply(`Berhasil menghapus user dari member premium`)
 }
 handler.help = ['delprem *@user*']
-handler.tags = ['owner', 'premium']
+handler.tags = ['Владелец', 'premium']
 handler.command = /^delprem$/i
 
-handler.owner = true
+handler.Владелец = true
 
 module.exports = handler

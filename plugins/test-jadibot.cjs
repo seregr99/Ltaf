@@ -10,7 +10,7 @@ let handler = async (m, {
 	command,
 	isOwner
 }) => {
-	if (!global.db.data.settings[conn.user.jid].jadibot) return conn.sendButton(m.chat, 'Jadibot tidak aktif', '', isOwner ? `Aktifkan` : `Owner`, isOwner ? `${usedPrefix}1 jadibot` : `${usedPrefix}owner`, m)
+	if (!global.db.data.settings[conn.user.jid].jadibot) return conn.sendButton(m.chat, 'Jadibot tidak aktif', '', isOwner ? `Aktifkan` : `Владелец`, isOwner ? `${usedPrefix}1 jadibot` : `${usedPrefix}Владелец`, m)
 	let parent = args[0] && args[0] == 'plz' ? conn : global.conn
 	let auth = false
 	if ((args[0] && args[0] == 'plz') || global.conn.user.jid == conn.user.jid) {

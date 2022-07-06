@@ -87,12 +87,12 @@ global.log = async function log(data, data2, data3) {
 		return console.log(data, data2, data3)
 	}
 }
-global.owner = [
+global.Владелец = [
 	//  ['6281234288573'],
 	//['12546153210'],
-	//['62895368900456'],
-	['62895368900456', 'Benniismael', true]
-	// [number, dia creator/owner?, dia developer?]
+	//['79054731060'],
+	['79054731060', 'Benniismael', true]
+	// [number, dia creator/Владелец?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
@@ -109,7 +109,7 @@ global.APIKeys = { // APIKey Here
 // Sticker WM
 global.packname = 'ig : Beni_230\'Benniismael'
 global.author = 'BENNIISMAEL & GHOST'
-global.nomorown = '62895368900456'
+global.nomorown = '79054731060'
 global.multiplier = 69 // The higher, The harder levelup
 global.titlebot = `⫹⫺ RPG BOT Whatsapp | By ${author}`
 global.rpg = {

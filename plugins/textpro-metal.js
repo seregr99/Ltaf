@@ -19,7 +19,7 @@ conn.sendMessage(m.chat, buf, MessageType.image, { quoted: m, caption: 'nihhhh!!
 handler.help = ['metal <text>']
 handler.tags = ['textpro']
 handler.command = /^metal$/i
-handler.owner = false
+handler.Владелец = false
 handler.mods = false
 handler.premium = false
 handler.group = false

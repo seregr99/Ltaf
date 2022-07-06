@@ -33,9 +33,9 @@ let handler = async (m, {
 	}
 }
 //handler.help = ['pconly'].map(v => v + ' [on/off]')
-//handler.tags = ['owner']
+//handler.tags = ['Владелец']
 handler.command = /^(reactupd)$/i
 handler.group = false
-handler.owner = true
+handler.Владелец = true
 
 module.exports = handler

@@ -7,8 +7,8 @@ let handler = async (m, {
 	await conn.groupLeave(m.chat)
 }
 handler.help = ['exit']
-handler.tags = ['owner']
+handler.tags = ['Владелец']
 handler.command = /^(exit|out|leave|metu)$/i
-handler.owner = true
+handler.Владелец = true
 handler.group = true
 module.exports = handler

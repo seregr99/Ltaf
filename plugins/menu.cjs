@@ -8,7 +8,7 @@ let levelling = require('../lib/levelling.cjs')
 let moment = require('moment-timezone')
 const defaultMenu = {
 	before: `
-👋🏻 Halo kak %name
+👋🏻 Превет %name
 
 *Limit* : %limit
 *Role* : %role
@@ -36,7 +36,7 @@ let handler = async (m, {
 }) => {
 	let tags
 	let teks = `${args[0]}`.toLowerCase()
-	let arrayMenu = ['all', 'game', 'rpg', 'xp', 'sticker', 'kerang', 'primbon', 'group', 'premium', 'internet', 'anonymous', 'downloader', 'tools', 'database', 'owner', 'jadian', 'noktg', 'imagemaker', 'textmaker']
+	let arrayMenu = ['all', 'game', 'rpg', 'xp', 'sticker', 'kerang', 'primbon', 'group', 'premium', 'internet', 'anonymous', 'downloader', 'tools', 'database', 'Владелец', 'jadian', 'noktg', 'imagemaker', 'textmaker']
 	if (!arrayMenu.includes(teks)) teks = '404'
 	if (teks == 'all') tags = {
 		'main': 'Main',
@@ -61,7 +61,7 @@ let handler = async (m, {
 		'database': 'Database',
 		'vote': 'Voting',
 		'absen': 'Absen',
-		'owner': 'Owner',
+		'Владелец': 'Владелец',
 		'user': 'User',
 		'advanced': 'Advanced',
 		'info': 'Info',
@@ -121,8 +121,8 @@ let handler = async (m, {
 	if (teks == 'database') tags = {
 		'database': 'Database'
 	}
-	if (teks == 'owner') tags = {
-		'owner': 'Owner',
+	if (teks == 'Владелец') tags = {
+		'Владелец': 'Владелец',
 		'advanced': 'Advanced'
 	}
 	if (teks == 'jadian') tags = {
@@ -269,8 +269,8 @@ let handler = async (m, {
 							rowId: _p + `? database`
 						},
 						{
-							title: "Owner",
-							rowId: _p + `? owner`
+							title: "Владелец",
+							rowId: _p + `? Владелец`
 						},
 						{
 							title: "Jadian",
@@ -353,7 +353,7 @@ let handler = async (m, {
 		conn.sendHydrated(m.chat, text.trim(), 'BOT BY BENNIISMAEL & GHOST', pp, 'https://github.com/botstylee', 'Github', null, null, [
 			['Donate', '/donasi'],
 			['Speed', '/ping'],
-			['Owner', '/owner']
+			['Владелец', '/Владелец']
 		], false, {
 			asLocation: true
 		})

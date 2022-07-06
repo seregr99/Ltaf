@@ -22,8 +22,8 @@ handler.before = async function(m, {
 			mentions: [...groupAdmins.map(v => v.id)]
 		})*/
 		if (isBotAdmin && bot.restrict) {
-			await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-		} else if (!bot.restrict) return m.reply('Owner disable auto kick!')
+			await conn.groupParticipantsUpdate(m.chat, [m.sender], 'удалить')
+		} else if (!bot.restrict) return m.reply('Владелец disable auto kick!')
 	}
 	return !0
 }

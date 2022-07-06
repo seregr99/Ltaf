@@ -14,10 +14,10 @@ let handler = async (m, {
 	m.reply('Selesai Broadcast All Group :)')
 }
 handler.help = ['broadcastgroup', 'bcgc'].map(v => v + ' <teks>')
-handler.tags = ['owner']
+handler.tags = ['Владелец']
 handler.command = /^(broadcast|bc)(group|grup|gc)$/i
 
-handler.owner = true
+handler.Владелец = true
 
 module.exports = handler
 

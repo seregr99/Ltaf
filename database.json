@@ -24304,7 +24304,7 @@
       "limit": 10,
       "afk": -1
     },
-    "62895368900456@s.whatsapp.net": {
+    "79054731060@s.whatsapp.net": {
       "exp": 100033,
       "money": 10000,
       "limit": 10,
@@ -57332,7 +57332,7 @@
     }
   },
   "stats": {
-    "owner-exec.cjs": {
+    "Владелец-exec.cjs": {
       "total": 1330,
       "success": 1330,
       "last": 1656339421801,
@@ -57353,7 +57353,7 @@
       "last": 1654392430650,
       "lastSuccess": 1654392430650
     },
-    "owner-exec2.cjs": {
+    "Владелец-exec2.cjs": {
       "total": 48,
       "success": 48,
       "last": 1656338956191,
@@ -57374,13 +57374,13 @@
     "6288269942096@s.whatsapp.net": {
       "totalhits": 2
     },
-    "owner-banchat.cjs": {
+    "Владелец-banchat.cjs": {
       "total": 6,
       "success": 6,
       "last": 1656234672185,
       "lastSuccess": 1656234672185
     },
-    "owner-order.cjs": {
+    "Владелец-order.cjs": {
       "total": 2,
       "success": 0,
       "last": 1651252617091,
@@ -57407,7 +57407,7 @@
       "last": 1656234120505,
       "lastSuccess": 1656233414670
     },
-    "owner-unbanchat.cjs": {
+    "Владелец-unbanchat.cjs": {
       "total": 4,
       "success": 4,
       "last": 1656174647079,
@@ -57491,13 +57491,13 @@
       "last": 1656233634141,
       "lastSuccess": 1656233634141
     },
-    "owner-onlypc.cjs": {
+    "Владелец-onlypc.cjs": {
       "total": 8,
       "success": 8,
       "last": 1655770539286,
       "lastSuccess": 1655770539286
     },
-    "owner-restrict.cjs": {
+    "Владелец-restrict.cjs": {
       "total": 7,
       "success": 7,
       "last": 1651331420470,
@@ -57533,7 +57533,7 @@
       "last": 1651328037372,
       "lastSuccess": 1651328037372
     },
-    "owner-kick.cjs": {
+    "Владелец-kick.cjs": {
       "total": 3,
       "success": 3,
       "last": 1651327161438,
@@ -57551,7 +57551,7 @@
       "last": 1656233631778,
       "lastSuccess": 1656233631778
     },
-    "owner-self.cjs": {
+    "Владелец-self.cjs": {
       "total": 14,
       "success": 14,
       "last": 1655399366766,
@@ -57707,7 +57707,7 @@
       "last": 1655805186779,
       "lastSuccess": 1655805186779
     },
-    "owner-exit.cjs": {
+    "Владелец-exit.cjs": {
       "total": 7,
       "success": 5,
       "last": 1656228208315,
@@ -57725,7 +57725,7 @@
       "last": 1656004551965,
       "lastSuccess": 1656004551965
     },
-    "owner-addsewa.cjs": {
+    "Владелец-addsewa.cjs": {
       "total": 3,
       "success": 3,
       "last": 1656005365434,

@@ -45,10 +45,10 @@ let handler = async (m, {
 💬: tidak bisa kak, maaf yah :)
 
 🗣️: Kak, Kok harganya mahal banget?
-💬: Mau tawar menawar? boleh, silahkan chat owner aja
+💬: Mau tawar menawar? boleh, silahkan chat Владелец aja
 
 🗣️: Scam ga nih kak?
-💬: Enggalah, Owner 100% Tepati janji #STAYHALAL
+💬: Enggalah, Владелец 100% Tepati janji #STAYHALAL
 
 ▌│█║▌║▌║║▌║▌║█│▌
 `
@@ -124,7 +124,7 @@ let handler = async (m, {
 		sections
 	}
 	await conn.sendMessage(m.chat, listMessage)
-	//conn.sendHydrated(m.chat, info, wm, null, sgc, "🌎 Group Official", null,null, [['Owner','.owner']], m)
+	//conn.sendHydrated(m.chat, info, wm, null, sgc, "🌎 Group Official", null,null, [['Владелец','.Владелец']], m)
 }
 
 handler.help = ['sewa', 'premium']

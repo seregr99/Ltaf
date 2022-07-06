@@ -10,7 +10,7 @@ let handler = async (m, {
 		if (isOwner) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') : m.chat
 		else who = m.chat
 	} else {
-		if (!isOwner) return dfail('owner', m, conn)
+		if (!isOwner) return dfail('Владелец', m, conn)
 		who = text ? text.replace(/[^0-9]/g, '') : m.chat
 	}
 
@@ -25,7 +25,7 @@ let handler = async (m, {
 	}
 }
 handler.help = ['ban']
-handler.tags = ['owner', 'group']
+handler.tags = ['Владелец', 'group']
 handler.command = /^ban(chat)?$/i
 
 module.exports = handler

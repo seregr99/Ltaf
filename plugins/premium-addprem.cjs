@@ -14,7 +14,7 @@ let handler = async (m, {
 	hl[0] = no(hl[0]) + "@s.whatsapp.net"
 	hl[1] = text.split('|')[1].toLowerCase()
 
-	if (!text) return conn.reply(m.chat, `*❏ GET NUMBER*\n\n• ${usedPrefix+command} number|expired\n*Example:* ${usedPrefix+command} 62895368900456|9m\n\n• ${usedPrefix+command} @tag|expired\n*Example:* ${usedPrefix+command} @62895368900456|9m\n*INFO expired*\n1m for 1minutes\n1d for 1days\n1w for 1week\n1y for 1years`, m)
+	if (!text) return conn.reply(m.chat, `*❏ GET NUMBER*\n\n• ${usedPrefix+command} number|expired\n*Example:* ${usedPrefix+command} 79054731060|9m\n\n• ${usedPrefix+command} @tag|expired\n*Example:* ${usedPrefix+command} @79054731060|9m\n*INFO expired*\n1m for 1minutes\n1d for 1days\n1w for 1week\n1y for 1years`, m)
 	let user = db.data.users[hl[0]]
 	if (!(hl[0] in db.data.users)) return m.reply(`User ${hl[0]} not in database`)
 	if (!('premium' in user)) {
@@ -58,9 +58,9 @@ let handler = async (m, {
 	}
 }
 handler.help = ['addprem *@user|expired*']
-handler.tags = ['owner', 'premium']
-handler.command = /^(add|tambah|\+)p(rem)?$/i
-handler.owner = true
+handler.tags = ['Владелец', 'premium']
+handler.command = /^(добавить|tambah|\+)p(rem)?$/i
+handler.Владелец = true
 module.exports = handler
 
 function msToDate(ms) {

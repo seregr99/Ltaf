@@ -17,7 +17,7 @@ let handler = async (m, {
 	}).format(user.expired) + `\n}`)
 }
 handler.help = ['checkprem']
-handler.tags = ['owner', 'premium']
+handler.tags = ['Владелец', 'premium']
 handler.command = /^checkprem$/i
 
 module.exports = handler

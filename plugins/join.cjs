@@ -14,7 +14,7 @@ let handler = async (m, {
 	if (isOwner) {
 		m.reply(`Berhasil join grup ${res}`)
 		await delay(1500)
-		conn.reply(res, `*${conn.user.name}* adalah bot whatsapp yang di bangun menggunakan Nodejs, diundang oleh owner kami *@${m.sender.split`@`[0]}* \n\nUntuk Melihat List *Menu* bot ketik *#menu*\n`.trim(), null, {
+		conn.reply(res, `*${conn.user.name}* adalah bot whatsapp yang di bangun menggunakan Nodejs, diundang oleh Владелец kami *@${m.sender.split`@`[0]}* \n\nUntuk Melihat List *Menu* bot ketik *#menu*\n`.trim(), null, {
 			mentions: [m.sender]
 		})
 	} else if (users.premium || users.sewa) {
@@ -26,7 +26,7 @@ let handler = async (m, {
 		chats.groupexpired = true
 		m.reply(`Berhasil join grup ${res}${expired ? ` selama ${expired} hari` : ''}.\nlimitjoin berkurang 1\n${user.limitjoin == 0 ? 'Limit join kamu sudah habis' : 'Limit join kamu tersisa ' + user.limitjoin}`)
 		await delay(1500)
-		conn.reply(res, `*${conn.user.name}* adalah bot whatsapp yang di bangun menggunakan Nodejs, diundang oleh @${m.sender.split`@`[0]} trial selama\n*${msToDate(db.data.chats[res].expired - new Date() * 1)}*\n\nUntuk Melihat List *Menu* bot ketik *#menu*\n\nJika ingin di perpanjang expired group harap hubungi *owner* kami..`.trim(), null, {
+		conn.reply(res, `*${conn.user.name}* adalah bot whatsapp yang di bangun menggunakan Nodejs, diundang oleh @${m.sender.split`@`[0]} trial selama\n*${msToDate(db.data.chats[res].expired - new Date() * 1)}*\n\nUntuk Melihat List *Menu* bot ketik *#menu*\n\nJika ingin di perpanjang expired group harap hubungi *Владелец* kami..`.trim(), null, {
 			mentions: [m.sender]
 		})
 	} else {
@@ -38,7 +38,7 @@ let handler = async (m, {
 		chats.groupexpired = true
 		m.reply(`Berhasil join grup ${res}${expired ? ` selama ${expired} hari` : ''}.\nlimitjoin berkurang 1\n${user.limitjoin == 0 ? 'Limit join kamu sudah habis' : 'Limit join kamu tersisa ' + user.limitjoin}\n*INFO*\nbagi member free masing-masing mendapatkan 1 trial limitjoin selama 1hari 12jam\nbeli point limitjoin untuk mendapatkan trial limitjoin selama 30 hari atau upgrade ke premium`)
 		await delay(1500)
-		conn.reply(res, `*${conn.user.name}* adalah bot whatsapp yang di bangun menggunakan Nodejs, diundang oleh @${m.sender.split`@`[0]} trial selama\n*${msToDate(db.data.chats[res].expired - new Date() * 1)}*\n\nUntuk Melihat List *Menu* bot ketik *#menu*\n\nJika ingin di perpanjang expired group harap hubungi *owner* kami..`.trim(), null, {
+		conn.reply(res, `*${conn.user.name}* adalah bot whatsapp yang di bangun menggunakan Nodejs, diundang oleh @${m.sender.split`@`[0]} trial selama\n*${msToDate(db.data.chats[res].expired - new Date() * 1)}*\n\nUntuk Melihat List *Menu* bot ketik *#menu*\n\nJika ingin di perpanjang expired group harap hubungi *Владелец* kami..`.trim(), null, {
 			mentions: [m.sender]
 		})
 	}

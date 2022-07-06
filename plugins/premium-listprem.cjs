@@ -18,7 +18,7 @@ ${prem ? `\t\t\t\t\t\t*My Premium Time*\n*Name:* ${conn.getName(m.sender)}\n*Exp
 
 ${sortedP.slice(0, len).map(({ jid, name, expired, registered }, i) => `\n*${registered ? name : conn.getName(jid)}*\n⚄ wa.me/${jid.split`@`[0]}\n⚄ ${msToDate(expired - new Date() * 1)}\n`).join`\n`}
 `.trim(), author, null, [
-			[prem ? '⭐ Owner' : '⭐ Buy Premium', prem ? '/owner' : '/premium']
+			[prem ? '⭐ Владелец' : '⭐ Buy Premium', prem ? '/Владелец' : '/premium']
 		], null)
 }
 handler.help = ['premlist *angka*']

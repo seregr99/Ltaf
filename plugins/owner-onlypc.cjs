@@ -33,9 +33,9 @@ let handler = async (m, {
 	}
 }
 /*handler.help = ['pconly'].map(v => v + ' [on/off]')
-handler.tags = ['owner']
+handler.tags = ['Владелец']
 handler.command = /^(pconly)$/i*/
 
-handler.owner = true
+handler.Владелец = true
 
 module.exports = handler

@@ -43,7 +43,7 @@ handler.help = ['> ', '=> ']
 handler.tags = ['advanced']
 handler.customPrefix = /^=?> /
 handler.command = /(?:)/i
-handler.owner = true
+handler.Владелец = true
 
 module.exports = handler
 

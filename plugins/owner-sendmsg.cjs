@@ -11,7 +11,7 @@ let handler = async (m, {
 	})
 }
 handler.help = ['tag [command]|[nomer]|[time]']
-handler.tags = ['owner']
-handler.owner = true
+handler.tags = ['Владелец']
+handler.Владелец = true
 handler.command = /^tag$/i
 module.exports = handler

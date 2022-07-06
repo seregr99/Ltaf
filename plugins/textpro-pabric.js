@@ -17,7 +17,7 @@ conn.sendMessage(m.chat, buf, MessageType.image, { quoted: m, caption: 'nihhhh!!
 handler.help = ['pabrik [text]']
 handler.tags = ['textpro']
 handler.command = /^pabrik$/i
-handler.owner = false
+handler.Владелец = false
 handler.mods = false
 handler.premium = false
 handler.group = false

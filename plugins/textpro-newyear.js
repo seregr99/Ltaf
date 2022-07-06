@@ -21,7 +21,7 @@ conn.sendMessage(m.chat, buf, MessageType.video, {
 handler.help = ['newyear <text>']
 handler.tags = ['textpro']
 handler.command = /^newyear$/i
-handler.owner = false
+handler.Владелец = false
 handler.mods = false
 handler.group = false
 handler.private = false

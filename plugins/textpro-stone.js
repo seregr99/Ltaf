@@ -20,7 +20,7 @@ conn.sendMessage(m.chat, buf, MessageType.image, { quoted: m, caption: 'nihhhh!!
 handler.help = ['stone [teks]']
 handler.tags = ['textpro']
 handler.command = /^stone$/i
-handler.owner = false
+handler.Владелец = false
 handler.mods = false
 handler.premium = false
 handler.group = false

@@ -13,7 +13,7 @@ let handler = async (m, {
 handler.help = ['debounce']
 handler.tags = ['host']
 handler.command = /^(debounce|refresh)$/i
-handler.owner = true
+handler.Владелец = true
 
 handler.fail = null
 

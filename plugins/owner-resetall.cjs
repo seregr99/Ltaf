@@ -26,7 +26,7 @@ let handler = async (m, {
 }
 
 handler.help = ['resetkabeh']
-handler.tags = ['owner']
+handler.tags = ['Владелец']
 handler.command = /^(resetkabeh)$/i
-handler.owner = true
+handler.Владелец = true
 module.exports = handler

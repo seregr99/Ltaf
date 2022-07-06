@@ -33,9 +33,9 @@ let handler = async (m, {
 	}
 }
 /*handler.help = ['restrict'].map(v => v + ' [on/off]')
-handler.tags = ['owner']
+handler.tags = ['Владелец']
 handler.command = /^(restrict)$/i*/
 
-handler.owner = true
+handler.Владелец = true
 
 module.exports = handler

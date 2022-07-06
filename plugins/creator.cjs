@@ -1,10 +1,10 @@
 let handler = function(m) {
-	const data = global.owner.filter(([id, isCreator]) => id && isCreator)
+	const data = global.Владелец.filter(([id, isCreator]) => id && isCreator)
 	this.sendContact(m.chat, data.map(([id, name]) => [id, name]), m)
 }
-handler.help = ['owner', 'creator']
-handler.tags = ['info']
+handler.help = ['владелиц', 'создатель']
+handler.tags = ['инфо']
 
-handler.command = /^(owner|creator)$/i
+handler.command = /^(Владелец|creator)$/i
 
 module.exports = handler

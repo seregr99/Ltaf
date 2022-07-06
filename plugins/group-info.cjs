@@ -22,7 +22,7 @@ let handler = async (m, {
 	} = db.data.chats[m.chat]
 	const groupAdmins = participants.filter(p => p.admin)
 	const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
-	const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-` [0] + '@s.whatsapp.net'
+	const Владелец = groupMetadata.Владелец || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-` [0] + '@s.whatsapp.net'
 	let text = `*「 Group Information 」*\n
 *ID:* 
 ${groupMetadata.id}
@@ -32,8 +32,8 @@ ${groupMetadata.subject}
 ${groupMetadata.desc?.toString() || 'unknown'}
 *Total Members:*
 ${participants.length} Members
-*Group Owner:* 
-@${owner.split('@')[0]}
+*Group Владелец:* 
+@${Владелец.split('@')[0]}
 *Group Admins:*
 ${listAdmin}
 ${groupexpired ? '*Group Expired:*\nExpired: ' + await msToDate(expired - new Date() * 1)+ '\n' : ''}
@@ -52,7 +52,7 @@ Promote: ${sPromote}
 Demote: ${sDemote}
 `.trim()
 	conn.reply(m.chat, await tiny(text), m, {
-		mentions: [...groupAdmins.map(v => v.id), owner],
+		mentions: [...groupAdmins.map(v => v.id), Владелец],
 		contextInfo: {
 			externalAdReply: {
 				mediaType: 2,

@@ -18,7 +18,7 @@ conn.sendMessage(m.chat, buf, MessageType.image, { quoted: m, caption: 'nihhhh!!
 handler.help = ['grafity3 <text>']
 handler.tags = ['textpro']
 handler.command = /^grafity3$/i
-handler.owner = false
+handler.Владелец = false
 handler.mods = false
 handler.premium = false
 handler.group = false

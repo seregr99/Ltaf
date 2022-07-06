@@ -20,7 +20,7 @@ conn.sendMessage(m.chat, buf, MessageType.image, { quoted: m } )
 handler.help = ['pornhub']
 handler.tags = ['textpro']
 handler.command = /^pornhub$/i
-handler.owner = false
+handler.Владелец = false
 handler.mods = false
 handler.premium = false
 handler.group = false

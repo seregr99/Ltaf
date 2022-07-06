@@ -436,13 +436,13 @@ async function handler(m, {
 						if (format.includes('mp4')) {
 							rows.push({
 								title: i.title,
-								description: `Cʜᴀɴɴᴇʟ: ${i.owner.channel} | Vɪᴇᴡꜱ: ${i.views}`,
+								description: `Cʜᴀɴɴᴇʟ: ${i.Владелец.channel} | Vɪᴇᴡꜱ: ${i.views}`,
 								rowId: _p + command + " " + i.browse + " mp4"
 							})
 						} else {
 							rows.push({
 								title: i.title,
-								description: `Cʜᴀɴɴᴇʟ: ${i.owner.channel} | Dᴜʀᴀᴛɪᴏɴꜱ: ${i.duration}`,
+								description: `Cʜᴀɴɴᴇʟ: ${i.Владелец.channel} | Dᴜʀᴀᴛɪᴏɴꜱ: ${i.duration}`,
 								rowId: _p + command + " " + i.browse + " mp3"
 							})
 						}

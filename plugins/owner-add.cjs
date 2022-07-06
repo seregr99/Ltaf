@@ -21,7 +21,7 @@ let handler = async (m, {
 			to: m.chat,
 		},
 		content: users.map(jid => ({
-			tag: 'add',
+			tag: 'добавить',
 			attrs: {},
 			content: [{
 				tag: 'participant',
@@ -32,15 +32,15 @@ let handler = async (m, {
 		}))
 	})
 	console.log(response)
-	// m.reply(`Succes add ${response.map(v => '@' + v.split('@')[0])}`, null, { mentions: response })
-	// TO SERVER -> <iq to="6282213162100-1633921576@g.us" type="set" xmlns="w:g2" id="63244.456-598"><add><participant jid="6285713964963@c.us" /></add></iq>
-	// FROM SERVER -> <iq from="6282213162100-1633921576@g.us" type="result" id="63244.456-598"><add><participant jid="6285713964963@s.whatsapp.net" error="403"><add_request code="32Ovb3/5p/Ap+2hb" expiration="1646365973" /></participant></add></iq>
+	// m.reply(`Succes добавить ${response.map(v => '@' + v.split('@')[0])}`, null, { mentions: response })
+	// TO SERVER -> <iq to="6282213162100-1633921576@g.us" type="set" xmlns="w:g2" id="63244.456-598"><добавить><participant jid="6285713964963@c.us" /></добавить></iq>
+	// FROM SERVER -> <iq from="6282213162100-1633921576@g.us" type="result" id="63244.456-598"><добавить><participant jid="6285713964963@s.whatsapp.net" error="403"><add_request code="32Ovb3/5p/Ap+2hb" expiration="1646365973" /></participant></добавить></iq>
 }
-handler.help = ['add', '+'].map(v => 'o' + v + ' @user')
-handler.tags = ['owner']
+handler.help = ['добавить', '+'].map(v => 'o' + v + ' @user')
+handler.tags = ['Владелец']
 handler.command = /^(oadd|o\+)$/i
 
-handler.owner = true
+handler.Владелец = true
 handler.group = true
 handler.botAdmin = true
 

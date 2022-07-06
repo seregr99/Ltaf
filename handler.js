@@ -715,7 +715,7 @@ export async function handler(chatUpdate) {
 			return
 		if (typeof m.text !== 'string')
 			m.text = ''
-		const isROwner = [this.decodeJid(this.user.id), ...global.owner.map(([number]) => number)].map(v => v?.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+		const isROwner = [this.decodeJid(this.user.id), ...global.Владелец.map(([number]) => number)].map(v => v?.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 		const isOwner = isROwner || m.fromMe
 		let settinge = db.data.settings[this.user.jid]
 		if (!isOwner && settinge.self)
@@ -758,7 +758,7 @@ export async function handler(chatUpdate) {
 				await delay(2000)
 				//conn.reply(m.chat, "kamu harus di kick sih bang", false)
 				//await delay(2000)
-				conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+				conn.groupParticipantsUpdate(m.chat, [m.sender], 'удалить')
 			}
 		}
 		if (settinges.restrict && enable.antiToxic && !m.fromMe && m.isGroup && !isAdmin && !isOwner && isBotAdmin) {
@@ -769,7 +769,7 @@ export async function handler(chatUpdate) {
 				if (warning >= 6) {
 					conn.reply(m.chat, `*Over badword!*\nyou will be removed after 3 second`, m).then(() => {
 						setTimeout(() => {
-							conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+							conn.groupParticipantsUpdate(m.chat, [m.sender], 'удалить')
 						}, 2000)
 						db.data.users[m.sender].warn = 0
 					})
@@ -800,7 +800,7 @@ export async function handler(chatUpdate) {
 				} catch (e) {
 					// if (typeof e === 'string') continue
 					console.error({plugin:e})
-					for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
+					for (let [jid] of global.Владелец.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
 						let data = (await this.onWhatsApp(jid))[0] || {}
 						if (data.exists)
 							m.reply(`*Plugin:* ${name}\n*Sender:* ${m.sender}\n*Chat:* ${m.chat}\n*Command:* ${m.text}\n\n\`\`\`${format(e)}\`\`\``.trim(), data.jid)
@@ -887,23 +887,23 @@ export async function handler(chatUpdate) {
 					let chat = db.data.chats[m.chat]
 					let user = db.data.users[m.sender]
 					let settings = db.data.settings[this.user.jid]
-					if (!['owner-unbanchat.cjs', 'group-info.cjs', 'owner-exec.cjs', 'owner-exec2.cjs', 'tool-delete.cjs', 'info-runtime.cjs', 'exp-ceksn.cjs', 'exp-daftar.cjs', 'exp-my.cjs', 'exp-unreg.cjs', 'group-link.cjs', 'enable.cjs', 'user-profile.cjs'].includes(name) && chat?.isBanned)
+					if (!['Владелец-unbanchat.cjs', 'group-info.cjs', 'Владелец-exec.cjs', 'Владелец-exec2.cjs', 'tool-delete.cjs', 'info-runtime.cjs', 'exp-ceksn.cjs', 'exp-daftar.cjs', 'exp-my.cjs', 'exp-unreg.cjs', 'group-link.cjs', 'enable.cjs', 'user-profile.cjs'].includes(name) && chat?.isBanned)
 						return // Except this
-					if (!['owner-unbanuser.cjs', 'user-profile.cjs', 'info-runtime.cjs'].includes(name) && user?.banned)
+					if (!['Владелец-unbanuser.cjs', 'user-profile.cjs', 'info-runtime.cjs'].includes(name) && user?.banned)
 						return
-					if (!['owner-unbanchat.cjs', 'user-profile.cjs', 'info-runtime.cjs', 'group-info.cjs', 'enable.cjs', 'owner-exec.cjs', 'owner-exec2.cjs'].includes(name) && settings?.pconly && m.isGroup && !isOwner)
+					if (!['Владелец-unbanchat.cjs', 'user-profile.cjs', 'info-runtime.cjs', 'group-info.cjs', 'enable.cjs', 'Владелец-exec.cjs', 'Владелец-exec2.cjs'].includes(name) && settings?.pconly && m.isGroup && !isOwner)
 						return
 				}
-				if (plugin.rowner && plugin.owner && !(isROwner || isOwner)) { // Both Owner
-					fail('owner', m, this)
+				if (plugin.rowner && plugin.Владелец && !(isROwner || isOwner)) { // Both Владелец
+					fail('Владелец', m, this)
 					continue
 				}
-				if (plugin.rowner && !isROwner) { // Real Owner
+				if (plugin.rowner && !isROwner) { // Real Владелец
 					fail('rowner', m, this)
 					continue
 				}
-				if (plugin.owner && !isOwner) { // Number Owner
-					fail('owner', m, this)
+				if (plugin.Владелец && !isOwner) { // Number Владелец
+					fail('Владелец', m, this)
 					continue
 				}
 				if (plugin.mods && !isMods) { // Moderator
@@ -982,7 +982,7 @@ export async function handler(chatUpdate) {
 						for (let key of Object.values(global.APIKeys))
 							text = text.replace(new RegExp(key, 'g'), '#HIDDEN#')
 						if (e.name)
-							for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
+							for (let [jid] of global.Владелец.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
 								let data = (await this.onWhatsApp(jid))[0] || {}
 								if (data.exists)
 									m.reply(`*Plugin:* ${m.plugin}\n*Sender:* ${m.sender}\n*Chat:* ${m.chat}\n*Command:* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\``.trim(), data.jid)
@@ -1081,8 +1081,8 @@ export async function participantsUpdate({
 	let chat = db.data.chats[id] || {}
 	let text = ''
 	switch (action) {
-		case 'add':
-		case 'remove':
+		case 'добавить':
+		case 'удалить':
 			if (chat.welcome) {
 				let groupMetadata = await this.groupMetadata(id)
 				for (let user of participants) {
@@ -1176,7 +1176,7 @@ Untuk mematikan fitur ini, ketik
 global.dfail = (type, m, conn) => {
 	let msg = {
 		rowner: '```Oɴʟʏ ᴏᴡɴᴇʀ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ!!```',
-		owner: '```Oɴʟʏ ᴏᴡɴᴇʀ ʙᴏᴛ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ!!!```',
+		Владелец: '```Oɴʟʏ ᴏᴡɴᴇʀ ʙᴏᴛ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ!!!```',
 		mods: '```Oɴʟʏ ᴍᴏᴅᴇʀᴀᴛᴏʀ ᴄᴀɴ ᴀᴄᴄᴇꜱꜱ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ!!```',
 		premium: 'Pᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʀ _*Pʀᴇᴍɪᴜᴍ*_ !',
 		group: '```Pᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴʏᴀ ᴅᴀᴘᴀᴛ ᴅɪɢᴜɴᴀᴋᴀɴ ᴅɪ ɢʀᴜᴘ!```',
