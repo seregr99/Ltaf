@@ -112,7 +112,7 @@ if (global.db.data == null) loadDatabase()
 if (connection == 'open') {
 console.log(chalk.yellow('▣─────────────────────────────···\n│\n│❧ АКТИВАЦЫЯ БОТА В  ВАТЦАПЕ АКТИВНА ✅\n│\n▣─────────────────────────────···'))}
 if (update.receivedPendingNotifications) {
-this.sendHydrated(`79054731060@s.whatsapp.net`, `Привет Хозяин, Я перезагрузился ✅`, global.author, global.imagen2, null, null, null, null, [['🌹 𝙾𝚆𝙽𝙴𝚁 🌹', '#owner'], ['👾 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 👾', '#menu']])
+this.sendHydrated(`79054731060@s.whatsapp.net`, `Привет Создатель, Я снова перезагрузился ✅`, global.author, global.imagen2, null, null, null, null, [['🌹 𝙾𝚆𝙽𝙴𝚁 🌹', '#owner'], ['👾 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 👾', '#menu']])
 this.groupAcceptInvite('Fu4ncsBxttC1sTMtjvdGTu')}
 }
 
