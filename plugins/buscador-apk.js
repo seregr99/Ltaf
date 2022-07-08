@@ -10,9 +10,9 @@ let jsons = await json.json()
 let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`
 for (let x of jsons.result) {
 caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-*𝚅𝙴𝚁𝚂𝙸𝙾𝙽:* ${x.apps_version}
+*Имя:* *${x.apps_name}*
+*Связь:* ${x.apps_linkdl}
+*Версия:* ${x.apps_version}
 `}
 await conn.reply(m.chat, caption, m)}
 
@@ -22,8 +22,8 @@ let jsons = await json.json()
 let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`
 for (let x of jsons.result) {
 caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
+*Имя:* *${x.apps_name}*
+*Связь:* ${x.apps_linkdl}
 `}
 await conn.reply(m.chat, caption, m)}
 
@@ -33,8 +33,8 @@ let jsons = await json.json()
 let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`
 for (let x of jsons.result) {
 caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
+*Имя:* *${x.apps_name}*
+*Связь:* ${x.apps_linkdl}
 *𝙳𝙴𝚂𝙲:* ${x.desc}
 `}
 await conn.reply(m.chat, caption, m)}
