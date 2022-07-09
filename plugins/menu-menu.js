@@ -63,7 +63,7 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
     
 
 let str = `
-*ミ💖 𝙷𝙾𝙻𝙰 ✨${name}✨, 𝙰𝚀𝚄𝙸 𝙴𝚂𝚃𝙰 𝙴𝙻 𝙼𝙴𝙽𝚄 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙾 𝙳𝙴 𝚃𝙷𝙴 𝙼𝚈𝚂𝚃𝙸𝙲 - 𝙱𝙾𝚃 💖彡*
+*ミ💖 ПРИВЕТ ✨${name}✨, Оснавное меню бота - Царя 💖彡*
 
 *📅 𝙵𝙴𝙲𝙷𝙰: ${week}, ${date}*
 *📈 𝚃𝙸𝙴𝙼𝙿𝙾 𝙰𝙲𝚃𝙸𝚅𝙾: ${uptime}*
@@ -111,7 +111,7 @@ let str = `
 ° ඬ⃟🎖️ _${usedPrefix}verdad_
 ° ඬ⃟🎖️ _${usedPrefix}reto_
 
-*<𝔸ℂ𝕋𝕀𝕍𝔸ℝ 𝕆 𝔻𝔼𝕊𝔸ℂ𝕋𝕀𝕍𝔸ℝ/>*
+*<МЕНЮ ДЛЯ АДМИНОВ/>*
 
 ° ඬ⃟☑️ _${usedPrefix}enable *welcome*_
 ° ඬ⃟☑️ _${usedPrefix}disable *welcome*_
@@ -139,7 +139,10 @@ let str = `
 ° ඬ⃟📥 _${usedPrefix}mediafire *<enlace / link / url>*_
 ° ඬ⃟📥 _${usedPrefix}instagram *<enlace / link / url>*_
 ° ඬ⃟📥 _${usedPrefix}gitclone *<enlace / link / url>*_
+° ඬ⃟📥 _${usedPrefix}gdrive *<enlace / link / url>*_
 ° ඬ⃟📥 _${usedPrefix}tiktok *<enlace / link / url>*_
+° ඬ⃟📥 _${usedPrefix}xnxxdl *<enlace / link / url>*_
+° ඬ⃟📥 _${usedPrefix}xvideosdl *<enlace / link / url>*_
 ° ඬ⃟📥 _${usedPrefix}ytmp3 *<enlace / link / url>*_
 ° ඬ⃟📥 _${usedPrefix}ytmp4 *<enlace / link / url>*_
 ° ඬ⃟📥 _${usedPrefix}ytmp3doc *<enlace / link / url>*_
@@ -148,6 +151,8 @@ let str = `
 ° ඬ⃟📥 _${usedPrefix}play.2 *<texto / enlace / link / url>*_
 ° ඬ⃟📥 _${usedPrefix}play *<texto>*_
 ° ඬ⃟📥 _${usedPrefix}playdoc *<texto>*_
+° ඬ⃟📥 _${usedPrefix}playlist *<texto>*_
+° ඬ⃟📥 _${usedPrefix}playlist2 *<texto>*_
 ° ඬ⃟📥 _${usedPrefix}spotify *<texto>*_
 ° ඬ⃟📥 _${usedPrefix}imagen *<texto>*_
 ° ඬ⃟📥 _${usedPrefix}pinteret *<texto>*_
@@ -158,7 +163,7 @@ let str = `
 ° ඬ⃟📥 _${usedPrefix}igstory *<nombre de usuario>*_
 ° ඬ⃟📥 _${usedPrefix}tiktokstalk *<nombre de usuario>*_
 
-*<𝔾ℝ𝕌ℙ𝕆𝕊/>* 
+*<ГРУППА/>* 
 
 ° ඬ⃟💎 _${usedPrefix}add *<numero>*_
 ° ඬ⃟💎 _${usedPrefix}kick *<@tag>*_
@@ -188,6 +193,8 @@ let str = `
 *<𝔼𝔽𝔼ℂ𝕋𝕆𝕊 𝕐 𝕃𝕆𝔾𝕆𝕊/>*
 
 ° ඬ⃟🖍️ _${usedPrefix}logos *<efecto> <texto>*_
+° ඬ⃟🖍️ _${usedPrefix}logocorazon *<texto>*_
+° ඬ⃟🖍️ _${usedPrefix}logochristmas *<texto>*_
 ° ඬ⃟🖍️ _${usedPrefix}simpcard *<@tag>*_
 ° ඬ⃟🖍️ _${usedPrefix}hornycard *<@tag>*_
 ° ඬ⃟🖍️ _${usedPrefix}lolice *<@tag>*_
@@ -196,7 +203,7 @@ let str = `
 ° ඬ⃟🖍️ _${usedPrefix}pixelar_
 ° ඬ⃟🖍️ _${usedPrefix}blur_
 
-*<ℝ𝔸ℕ𝔻𝕆𝕄/>*
+*<ИГРЫ/>*
 
 ° ඬ⃟👾 _${usedPrefix}cristianoronaldo_
 ° ඬ⃟👾 _${usedPrefix}messi_
@@ -246,7 +253,7 @@ let str = `
 ° ඬ⃟👾 _${usedPrefix}sakura_
 ° ඬ⃟👾 _${usedPrefix}cosplay_
 
-*<ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊 +𝟙𝟠/>*
+*<МЕНЮ +𝟙𝟠/>*
 
 ° ඬ⃟🔞 _${usedPrefix}pack_
 ° ඬ⃟🔞 _${usedPrefix}pack2_
@@ -304,11 +311,21 @@ let str = `
 
 *<𝔹𝕌𝕊ℂ𝔸𝔻𝕆ℝ𝔼𝕊/>*
 
+° ඬ⃟🔍 _${usedPrefix}xnxxsearch *<texto>*_
 ° ඬ⃟🔍 _${usedPrefix}animeinfo *<texto>*_
 ° ඬ⃟🔍 _${usedPrefix}google *<texto>*_
 ° ඬ⃟🔍 _${usedPrefix}letra *<texto>*_
 ° ඬ⃟🔍 _${usedPrefix}wikipedia *<texto>*_
 ° ඬ⃟🔍 _${usedPrefix}ytsearch *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}apkdone *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}apkgoogle *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}apkmody *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}apkshub *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}happymod *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}hostapk *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}revdl *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}toraccino *<texto>*_
+° ඬ⃟🔍 _${usedPrefix}uapkpro *<texto>*_
 
 *<𝔸𝕌𝔻𝕀𝕆𝕊/>* 
 *- 𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙻𝙰𝚂 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴𝚂 𝙿𝙰𝙻𝙰𝙱𝚁𝙰𝚂 𝙾 𝙵𝚁𝙰𝚂𝙴𝚂 𝚂𝙸𝙽 𝙽𝙸𝙽𝙶𝚄𝙽 𝙿𝚁𝙴𝙵𝙸𝙹𝙾 (#, /, *, .)* 
@@ -334,6 +351,7 @@ _(𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)_
 ° ඬ⃟🔊 _Marica quien_
 ° ඬ⃟🔊 _Murio el grupo_
 ° ඬ⃟🔊 _Oh me vengo_
+° ඬ⃟🔊 _tio que rico_
 ° ඬ⃟🔊 _Viernes_
 ° ඬ⃟🔊 _Baneado_
 ° ඬ⃟🔊 _Sexo_
@@ -381,25 +399,32 @@ _(𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)_
 ° ඬ⃟💵 _${usedPrefix}verificar_
 ° ඬ⃟💵 _${usedPrefix}unreg *<numero de serie>*_
 
-*<𝕊𝕋𝕀ℂ𝕂𝔼ℝ𝕊/>*
+*<СТИКЕР МЕНЮ/>*
 
 ° ඬ⃟👽 _${usedPrefix}sticker *<responder a imagen o video>*_
 ° ඬ⃟👽 _${usedPrefix}sticker *<enlace / link / url>*_
 ° ඬ⃟👽 _${usedPrefix}s *<responder a imagen o video>*_
 ° ඬ⃟👽 _${usedPrefix}s *<enlace / link / url>*_
 ° ඬ⃟👽 _${usedPrefix}emojimix *<emoji 1>&<emoji 2>*_
+° ඬ⃟👽 _${usedPrefix}scircle *<responder a imagen>*_
 ° ඬ⃟👽 _${usedPrefix}semoji *<tipo> <emoji>*_
 ° ඬ⃟👽 _${usedPrefix}attp *<texto>*_
+° ඬ⃟👽 _${usedPrefix}attp2 *<texto>*_
 ° ඬ⃟👽 _${usedPrefix}ttp *<texto>*_
+° ඬ⃟👽 _${usedPrefix}ttp2 *<texto>*_
+° ඬ⃟👽 _${usedPrefix}ttp3 *<texto>*_
+° ඬ⃟👽 _${usedPrefix}ttp4 *<texto>*_
+° ඬ⃟👽 _${usedPrefix}ttp5 *<texto>*_
 ° ඬ⃟👽 _${usedPrefix}pat *<@tag>*_
-° ඬ⃟👽 _${usedPrefix}slap *<@tag>_
+° ඬ⃟👽 _${usedPrefix}slap *<@tag>*_
 ° ඬ⃟👽 _${usedPrefix}kiss *<@tag>*_
 ° ඬ⃟👽 _${usedPrefix}dado_
 ° ඬ⃟👽 _${usedPrefix}wm *<packname> <author>*_
 ° ඬ⃟👽 _${usedPrefix}stickermarker *<efecto> <responder a imagen>*_
 ° ඬ⃟👽 _${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_
 
-*<𝕆𝕎ℕ𝔼ℝ 𝕐 𝕄𝕆𝔻𝔼ℝ𝔸𝔻𝕆ℝ𝔼𝕊/>*
+*<МЕНЮ ДЛЯ СОЗДАТЕЛЯ
+/>*
 
 ° ඬ⃟👑 _${usedPrefix}cajafuerte_
 ° ඬ⃟👑 _${usedPrefix}enable *restrict*_
@@ -427,10 +452,10 @@ _(𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)_
 ° ඬ⃟👑 _${usedPrefix}delprem *<@tag>*_
 ° ඬ⃟👑 _${usedPrefix}listprem_
 `.trim()
-conn.sendHydrated(m.chat, str, wm, pp, 'https://github.com/BrunoSobrino/TheMystic-Bot-MD', '𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
-['📮 𝙳𝙾𝙽𝙰𝚁 📮', '/donasi'],
-['🌹 𝙾𝚆𝙽𝙴𝚁 🌹', '/owner'],
-['🐾 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🐾', '/infobot']
+conn.sendHydrated2(m.chat, str, wm, pp, 'ОПЛАТИТЬ БОТА МОЖНО У СОЗДАТЕЛЯ', 'ОПЛАТА', 'ДА ХУЙ ТЕБЕ ХА ХА ХА ', 'ЗАГЛЯНИ', [
+['📮 ДОНАТ 📮', '/donasi'],
+['🌹 СОЗДАТЕЛЬ 🌹', '/owner'],
+['🐾 ИНФО БОТ 🐾', '/infobot']
 ], m,)
 //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
 //type: 'audioMessage', 
@@ -439,9 +464,7 @@ conn.sendHydrated(m.chat, str, wm, pp, 'https://github.com/BrunoSobrino/TheMysti
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
 throw e
 }}
-handler.help = ['menu', 'help', '?']
-handler.tags = ['main']
-handler.command = /^(menucompleto|menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos|m|\?)$/i
+handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos)$/i
 handler.exp = 50
 handler.fail = null
 export default handler

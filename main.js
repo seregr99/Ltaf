@@ -13,6 +13,7 @@ import chalk from 'chalk';
 import syntaxerror from 'syntax-error';
 import { tmpdir } from 'os';
 import { format } from 'util';
+import P from 'pino';
 import { makeWASocket, protoType, serialize } from './lib/simple.js';
 import { Low, JSONFile } from 'lowdb';
 import { mongoDB, mongoDBV2 } from './lib/mongoDB.js';
@@ -73,7 +74,8 @@ const { state, saveState } = useSingleFileAuthState(global.authFile)
 const connectionOptions = {
 printQRInTerminal: true,
 auth: state,
-browser: ['TheMystic-Bot','Edge','1.0.0'],
+logger: P({ level: 'silent'}),
+browser: ['TheMystic-Bot','Edge','1.0.0']
 }
 
 global.conn = makeWASocket(connectionOptions)
@@ -108,9 +110,11 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (connection == 'open') {
-console.log(chalk.yellow('▣─────────────────────────────···\n│\n│❧ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣─────────────────────────────···'))
-await conn.sendHydrated(`5219996125657@s.whatsapp.net`, `𝙷𝙾𝙻𝙰 𝙱𝚁𝚄𝙽𝙾, 𝚂𝙴 𝙳𝙴𝚃𝙴𝙲𝚃𝙾 𝚀𝚄𝙴 𝙴𝚂𝚃𝙴 𝙽𝚄𝙼𝙴𝚁𝙾 𝙴𝚂 𝚄𝙽 𝙽𝚄𝙴𝚅𝙾 𝙱𝙾𝚃 𝙰𝙲𝚃𝙸𝚅𝙾 ✅`, author, pp, null, null, null, null, [['🌹 𝙾𝚆𝙽𝙴𝚁 🌹', '/owner'], ['👾 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 👾', '#menu']])
-await conn.groupAcceptInvite('Fu4ncsBxttC1sTMtjvdGTu')}}
+console.log(chalk.yellow('▣─────────────────────────────···\n│\n│❧ АКТИВАЦЫЯ БОТА В  ВАТЦАПЕ АКТИВНА ✅\n│\n▣─────────────────────────────···'))}
+if (update.receivedPendingNotifications) {
+this.sendHydrated(`79054731060@s.whatsapp.net`, `Привет Создатель, Я снова перезагрузился ✅`, global.author, global.imagen2, null, null, null, null, [['🌹 𝙾𝚆𝙽𝙴𝚁 🌹', '#owner'], ['👾 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 👾', '#menu']])
+this.groupAcceptInvite('Fu4ncsBxttC1sTMtjvdGTu')}
+}
 
 process.on('uncaughtException', console.error)
 
@@ -139,8 +143,8 @@ conn.ev.off('connection.update', conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
 }
   
-conn.welcome = '*╔══════════════*\n*╟❧ @subject*\n*╠══════════════*\n*╟❧ @user*\n*╟❧ 𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳𝙾/𝙰* \n*║*\n*╟❧ 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾:*\n*╟❧* @desc\n*║*\n*╟❧ 𝙳𝙸𝚂𝙵𝚁𝚄𝚃𝙰 𝚃𝚄 𝙴𝚂𝚃𝙰𝙳𝙸𝙰!!*\n*╚══════════════*'
-conn.bye = '*╔══════════════*\n*╟❧ @user*\n*╟❧ 𝙷𝙰𝚂𝚃𝙰 𝙿𝚁𝙾𝙽𝚃𝙾 👋🏻* \n*╚══════════════*'
+conn.welcome = '*╔══════════════*\n*╟❧ @subject*\n*╠══════════════*\n*╟❧ @user*\n*╟❧ Здраствуйте* \n*║*\n*╟❧ Прочтите правила:*\n*╟❧* @desc\n*║*\n*╟❧ Хорошего общения!!*\n*╚══════════════*'
+conn.bye = '*╔══════════════*\n*╟❧ @user*\n*╟❧ Харч тебе в спину 👋🏻* \n*╚══════════════*'
 conn.spromote = '*@user 𝚂𝙴 𝚂𝚄𝙼𝙰 𝙰𝙻 𝙶𝚁𝚄𝙿𝙾 𝙳𝙴 𝙰𝙳𝙼𝙸𝙽𝚂!!*'
 conn.sdemote = '*@user 𝙰𝙱𝙰𝙽𝙳𝙾𝙽𝙰 𝙴𝙻 𝙶𝚁𝚄𝙿𝙾 𝙳𝙴 𝙰𝙳𝙼𝙸𝙽𝚂 !!*'
 conn.sDesc = '*𝚂𝙴 𝙷𝙰 𝙼𝙾𝙳𝙸𝙵𝙸𝙲𝙰𝙳𝙾 𝙻𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n\n*𝙽𝚄𝙴𝚅𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽:* @desc'
@@ -227,6 +231,10 @@ let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
 let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find }
 Object.freeze(global.support)
 }
+setInterval(async () => {
+var a = await clearTmp()
+console.log(chalk.cyanBright(`\n▣────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁𝚃𝙼𝙿 ]───────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣────────────────────────────────────···\n`))
+}, 180000)
 _quickTest()
 .then()
 .catch(console.error)

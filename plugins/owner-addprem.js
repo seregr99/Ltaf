@@ -10,7 +10,7 @@ contextInfo: {
 mentionedJid: [who]
 }})}
 handler.help = ['addprem <@user>']
-handler.tags = ['owner']
+handler.tags = ['Создатель']
 handler.command = /^(add|\+)prem$/i
 handler.group = true
 handler.rowner = true
